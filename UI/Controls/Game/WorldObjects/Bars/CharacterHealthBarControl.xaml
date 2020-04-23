@@ -1,5 +1,5 @@
 ﻿<base:BaseUserControl
-    x:Class="AtomicTorch.CBND.CoreMod.UI.Controls.Game.WorldObjects.Bars.StructurePointsBarControl"
+    x:Class="AtomicTorch.CBND.CoreMod.UI.Controls.Game.WorldObjects.Bars.CharacterHealthBarControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -9,7 +9,7 @@
     xmlns:core="clr-namespace:AtomicTorch.CBND.CoreMod.UI.Controls.Core"
     mc:Ignorable="d"
     IsHitTestVisible="False"
-    d:DataContext="{d:DesignInstance data:ViewModelStructurePointsBarControl, IsDesignTimeCreatable=True}">
+    d:DataContext="{d:DesignInstance data:ViewModelCharacterHealthBarControl, IsDesignTimeCreatable=True}">
 
     <base:BaseUserControl.Resources>
         <ResourceDictionary>
@@ -82,14 +82,13 @@
     </base:BaseUserControl.Resources>
 
     <core:ValueBarControl
-        Background="#88002200"
-        BorderBrush="#CC009900"
-        BarBrush="#CC00DD00"
+        Background="#88330000"
+        BorderBrush="#CCBB0000"
+        BarBrush="#CCFF0000"
         IsDisplayLabel="True"
         IsDisplayPercents="False"
-        DataContext="{Binding StatBar}"
-        MaxValue="{Binding ValueMax}"
-        Value="{Binding ValueCurrent}"
+        MaxValue="{Binding StatBar.ValueMax}"
+        Value="{Binding StatBar.ValueCurrent}"
         Style="{StaticResource WorldObjectPreciseValueBarControlStyle}" />
 
 </base:BaseUserControl>
